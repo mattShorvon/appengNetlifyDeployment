@@ -9,13 +9,13 @@ function data() {
   var decoded_token = jwt_decode(token);
   var userId = decoded_token.userId;
   // async function getData() {
-  //   const result = await axios.post("http://comp0067.herokuapp.com/getproductslist", {
+  //   const result = await axios.post("https://comp0067.herokuapp.com/getproductslist", {
   //     userId,
   //   });
   //   return result.data;
   // }
   //   return axios
-  //     .post("http://comp0067.herokuapp.com/getproductslist", {
+  //     .post("https://comp0067.herokuapp.com/getproductslist", {
   //       userId,
   //     })
   //     .then((response) => response.data);

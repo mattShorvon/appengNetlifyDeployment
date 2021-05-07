@@ -20,7 +20,9 @@ export const listProductsAndServices = () => async (dispatch) => {
   var userId = decoded_token.userId;
   try {
     await axios
-      .post("http://comp0067.herokuapp.com/getproductsandserviceslist", { userId })
+      .post("https://comp0067.herokuapp.com/getproductsandserviceslist", {
+        userId,
+      })
       .then((response) => {
         const products = response.data;
         console.log(products);
@@ -45,7 +47,7 @@ export const listProducts = (businessName, itemCategory) => async (
   if (userId === "customer") {
     try {
       await axios
-        .post("http://comp0067.herokuapp.com/getproductslistcustomer", {
+        .post("https://comp0067.herokuapp.com/getproductslistcustomer", {
           businessName,
           itemCategory,
         })
@@ -65,7 +67,10 @@ export const listProducts = (businessName, itemCategory) => async (
       // console.log(res);
       // await dispatch({ type: PRODUCT_LIST_SUCCESS, payload: res.data });
       await axios
-        .post("http://comp0067.herokuapp.com/getproductslist", { userId, itemCategory })
+        .post("https://comp0067.herokuapp.com/getproductslist", {
+          userId,
+          itemCategory,
+        })
         .then((response) => {
           const products = response.data;
           console.log(products);
@@ -84,7 +89,7 @@ export const addNewProduct = (data) => async (dispatch) => {
   console.log(data);
   try {
     await axios
-      .post("http://comp0067.herokuapp.com/addnewproduct", {
+      .post("https://comp0067.herokuapp.com/addnewproduct", {
         userId: userId,
         itemId: data.itemId,
         name: data.name,
@@ -108,7 +113,7 @@ export const addNewProduct = (data) => async (dispatch) => {
           },
         })
       );
-      alert("New Product Added!")
+    alert("New Product Added!");
   } catch (error) {
     dispatch({ type: REMOVE_NEW_PRODUCT_FAIL, payload: error.message });
   }
@@ -120,14 +125,14 @@ export const removeNewProduct = (product) => async (dispatch) => {
   var userId = decoded_token.userId;
   try {
     await axios
-      .post("http://comp0067.herokuapp.com/removeproduct", {
+      .post("https://comp0067.herokuapp.com/removeproduct", {
         userId: userId,
         itemId: product.itemId,
       })
       .then(() => {
         dispatch({ type: REMOVE_NEW_PRODUCT, payload: product.itemId });
       });
-      alert("Product Removed!")
+    alert("Product Removed!");
   } catch (error) {
     dispatch({ type: REMOVE_NEW_PRODUCT_FAIL, payload: error.message });
   }

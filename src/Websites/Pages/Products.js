@@ -73,7 +73,7 @@ const Products = ({ websitename, showWebsiteList }) => {
                 return (
                   <ProductCard key={product.itemId}>
                     <ProductImg
-                      src={`https://comp0067.herokuapp.com/${product.itemPicture}`}
+                      src={`http://localhost:5000/${product.itemPicture}`}
                     />
                     <ProductInfo>
                       <ProductTitle>{product.name}</ProductTitle>

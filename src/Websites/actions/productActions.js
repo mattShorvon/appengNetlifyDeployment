@@ -20,7 +20,7 @@ export const listProductsAndServices = () => async (dispatch) => {
   var userId = decoded_token.userId;
   try {
     await axios
-      .post("https://comp0067.herokuapp.com/getproductsandserviceslist", {
+      .post("http://localhost:5000/getproductsandserviceslist", {
         userId,
       })
       .then((response) => {
@@ -47,7 +47,7 @@ export const listProducts = (businessName, itemCategory) => async (
   if (userId === "customer") {
     try {
       await axios
-        .post("https://comp0067.herokuapp.com/getproductslistcustomer", {
+        .post("http://localhost:5000/getproductslistcustomer", {
           businessName,
           itemCategory,
         })
@@ -67,7 +67,7 @@ export const listProducts = (businessName, itemCategory) => async (
       // console.log(res);
       // await dispatch({ type: PRODUCT_LIST_SUCCESS, payload: res.data });
       await axios
-        .post("https://comp0067.herokuapp.com/getproductslist", {
+        .post("http://localhost:5000/getproductslist", {
           userId,
           itemCategory,
         })
@@ -89,7 +89,7 @@ export const addNewProduct = (data) => async (dispatch) => {
   console.log(data);
   try {
     await axios
-      .post("https://comp0067.herokuapp.com/addnewproduct", {
+      .post("http://localhost:5000/addnewproduct", {
         userId: userId,
         itemId: data.itemId,
         name: data.name,
@@ -125,7 +125,7 @@ export const removeNewProduct = (product) => async (dispatch) => {
   var userId = decoded_token.userId;
   try {
     await axios
-      .post("https://comp0067.herokuapp.com/removeproduct", {
+      .post("http://localhost:5000/removeproduct", {
         userId: userId,
         itemId: product.itemId,
       })

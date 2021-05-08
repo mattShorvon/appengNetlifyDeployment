@@ -100,7 +100,7 @@ const WebsiteSelect = ({ match }) => {
   const [websitelist, setWebsiteList] = useState([]);
   useEffect(() => {
     axios
-      .post("https://comp0067.herokuapp.com/websitelist")
+      .post("http://localhost:5000/websitelist")
       .then((response) => setWebsiteList(response.data), setLoading(false));
   }, []);
 
@@ -132,7 +132,7 @@ const WebsiteSelect = ({ match }) => {
                   to={`${match.url}/${businessName}/${showWebsiteList}`}
                   onClick={() => {
                     axios
-                      .post("https://comp0067.herokuapp.com/logincustomer")
+                      .post("http://localhost:5000/logincustomer")
                       .then((result) => {
                         console.log(result.data.token);
                         localStorage.setItem("token", result.data.token);

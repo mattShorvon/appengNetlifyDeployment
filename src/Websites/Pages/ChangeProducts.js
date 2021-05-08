@@ -25,7 +25,7 @@ function ChangeProducts() {
     data.append("file", event.target.files[0]);
 
     axios
-      .post("https://comp0067.herokuapp.com/api/users/upload", data)
+      .post("http://localhost:5000/api/users/upload", data)
       .then((res) => {
         console.log(res.data);
         setPhoto(res.data.filename);
@@ -142,7 +142,7 @@ function ChangeProducts() {
             style={{ color: "rgba(0, 0, 0, 0)" }}
           />
           {/* <div>
-            {itemPicture !== "" ? <img src={`https://comp0067.herokuapp.com/${itemPicture}`} /> : ""}
+            {itemPicture !== "" ? <img src={`http://localhost:5000/${itemPicture}`} /> : ""}
           </div> */}
           <br />
           <button className="formbutton" type="button" onClick={CommitPost}>

@@ -96,7 +96,7 @@ class MasterForm extends React.Component {
       email: this.state.email,
     };
     const data = await axios.get(
-      "https://comp0067.herokuapp.com/api/users/checkmail",
+      "http://localhost:5000/api/users/checkmail",
       { params: datapoint }
     );
     let emailValid = data.data.emailValid;
@@ -110,7 +110,7 @@ class MasterForm extends React.Component {
       businessName: this.state.businessName,
     };
     const data = await axios.get(
-      "https://comp0067.herokuapp.com/api/users/checkbusiness",
+      "http://localhost:5000/api/users/checkbusiness",
       { params: datapoint }
     );
     console.log(data);
@@ -361,7 +361,7 @@ class MasterForm extends React.Component {
     };
 
     axios
-      .post("https://comp0067.herokuapp.com/api/users/Register", userData)
+      .post("http://localhost:5000/api/users/Register", userData)
       .then(
         (response) => {
           console.log(response);

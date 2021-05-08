@@ -62,7 +62,8 @@ class LoginRedux extends Component {
             errors: err,
           });
           alert("The email and/or password you entered were incorrect");
-          this.props.history.push(`/login`);
+          return;
+          // this.props.history.push(`/login`);
         }
       })
       .catch((err) => {

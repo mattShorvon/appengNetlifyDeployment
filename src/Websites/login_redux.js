@@ -22,7 +22,7 @@ class LoginRedux extends Component {
 
   Login = (e) => {
     e.preventDefault();
-    this.props.setShowComponent(false);
+    // this.props.setShowComponent(false);
     this.setState({ [e.target.name]: e.target.value });
     const Data = {
       password: this.state.password,
@@ -34,16 +34,16 @@ class LoginRedux extends Component {
       .then((res) => {
         console.log(res);
         if (res["data"].message) {
-          // this means failed
+          // fail
           const err = res.data.message;
           this.setState({
             errors: err,
           });
           alert("The email and/or password you entered were incorrect");
-          return;
-          // this.props.history.push(``);
+          // return;
+          this.props.history.push(``);
         } else {
-          // this means successful
+          // successful
 
           console.log(res.data.token);
           localStorage.setItem("token", res.data.token);
@@ -58,6 +58,7 @@ class LoginRedux extends Component {
             .then((res) => {
               console.log(res);
               var business_name = res.data.businessName;
+              this.props.setShowComponent(false);
               console.log(business_name);
               this.props.history.push(`/-/${business_name}/true`);
             });

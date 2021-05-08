@@ -62,8 +62,7 @@ class LoginRedux extends Component {
             errors: err,
           });
           alert("The email and/or password you entered were incorrect");
-          return;
-          // this.props.history.push(`/login`);
+          this.props.history.push(`https://admiring-gates-03d2e4.netlify.app/`);
         }
       })
       .catch((err) => {

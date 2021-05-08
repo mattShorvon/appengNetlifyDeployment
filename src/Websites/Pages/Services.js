@@ -47,7 +47,7 @@ const Services = () => {
         </div>
       ) : (
         <ProductsContainer>
-          <ProductsHeading>Welcome to the products Page</ProductsHeading>
+          <ProductsHeading>Welcome to the Services Page</ProductsHeading>
           <ProductWrapper>
             {console.log(productList)}
             {products

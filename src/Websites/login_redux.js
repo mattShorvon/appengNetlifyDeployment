@@ -11,7 +11,7 @@ class LoginRedux extends Component {
     this.state = {
       email: "",
       password: "",
-      erros: "",
+      errors: "",
     };
     // console.log('login',props)
   }
@@ -59,8 +59,10 @@ class LoginRedux extends Component {
           // this means failed
           const err = res.data.message;
           this.setState({
-            erros: err,
+            errors: err,
           });
+          alert("The email and/or password you entered were incorrect");
+          this.props.history.push(`/login`);
         }
       })
       .catch((err) => {

@@ -59,7 +59,7 @@ function MainNavbar({ showWebsiteList, websitename }) {
 
   if (userId === "customer") {
     var navitems = [
-      { name: "whatsonoffer", desc: "On Sale" },
+      { name: "whatsonoffer", desc: "Products" },
       { name: "aboutme", desc: "About Me" },
       { name: "basket", desc: "Basket" },
       { name: "services", desc: "Services" },

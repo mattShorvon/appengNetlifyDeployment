@@ -132,17 +132,6 @@ function ChangeProducts() {
             onChange={onQuantityChange}
           />
           <label htmlFor="password">Picture: </label>
-          <input
-            type="file"
-            name="file"
-            data-testid="goodImage"
-            style={{ color: "rgba(0, 0, 0, 0)" }}
-            onChange={onPhotoChange}
-          />
-          {/* <div>
-              {photo !== '' ?
-                  <img src={`https://comp0067.herokuapp.com/${photo}`}/>  : ''}
-          </div> */}
           <br />
           <input
             type="file"

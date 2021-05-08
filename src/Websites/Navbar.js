@@ -66,7 +66,7 @@ function MainNavbar({ showWebsiteList, websitename }) {
     ];
   } else {
     var navitems = [
-      { name: "whatsonoffer", desc: "On Sale" },
+      { name: "whatsonoffer", desc: "Products" },
       { name: "aboutme", desc: "About Me" },
       { name: "basket", desc: "Basket" },
       { name: "services", desc: "Services" },

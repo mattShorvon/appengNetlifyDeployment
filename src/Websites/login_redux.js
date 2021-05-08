@@ -33,7 +33,16 @@ class LoginRedux extends Component {
       .post(`https://comp0067.herokuapp.com/login`, { Data })
       .then((res) => {
         console.log(res);
-        if (res["data"].token) {
+        if (res["data"].message) {
+          // this means failed
+          const err = res.data.message;
+          this.setState({
+            errors: err,
+          });
+          alert("The email and/or password you entered were incorrect");
+          return;
+          // this.props.history.push(``);
+        } else {
           // this means successful
 
           console.log(res.data.token);
@@ -54,15 +63,6 @@ class LoginRedux extends Component {
             });
 
           //   this.props.history.push("/about");
-        }
-        if (res["data"].message) {
-          // this means failed
-          const err = res.data.message;
-          this.setState({
-            errors: err,
-          });
-          alert("The email and/or password you entered were incorrect");
-          this.props.history.push(``);
         }
       })
       .catch((err) => {

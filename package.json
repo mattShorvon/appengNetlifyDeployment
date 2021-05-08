@@ -13,6 +13,7 @@
     "jwt-decode": "^3.1.2",
     "mdbreact": "^5.0.1",
     "multer": "^1.4.2",
+    "patch-package": "^6.4.7",
     "persist": "^0.2.7",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.1",
@@ -33,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": [

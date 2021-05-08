@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index ba8fd0b..3d043ed 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -345,6 +345,9 @@ module.exports = function (webpackEnv) {
+         }),
+         ...(modules.webpackAliases || {}),
+       },
++      alias: {
++        react: path.resolve('./node_modules/react')
++      },
+       plugins: [
+         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
+         // guards against forgotten dependencies and such.

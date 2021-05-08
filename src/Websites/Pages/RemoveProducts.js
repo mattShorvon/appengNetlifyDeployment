@@ -47,7 +47,9 @@ function RemoveProducts() {
             {products.map((product) => {
               return (
                 <ProductCard key={product.itemId}>
-                  <ProductImg src={product.image} />
+                  <ProductImg
+                      src={`https://comp0067.herokuapp.com/${product.itemPicture}`}
+                  />
                   <ProductInfo>
                     <ProductTitle>{product.name}</ProductTitle>
                     <ProductDesc>{product.description}</ProductDesc>

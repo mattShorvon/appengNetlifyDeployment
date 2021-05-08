@@ -38,6 +38,7 @@ function ChangeProducts() {
 
   const CommitPost = () => {
     if (name && itemPicture && description && price && quantity) {
+      console.log(name, description, price, quantity, itemCategory);
       dispatch(
         addNewProduct({
           itemId: getRandomInt(1000000),
@@ -111,7 +112,6 @@ function ChangeProducts() {
             value={price}
             onChange={onPriceChange}
           />
-          <label htmlFor="password">Picture: </label>
           {/* <input
             className="form-control"
             id="email"

@@ -1,3 +1,5 @@
+// Citation: Adapted from: https://redux.js.org/introduction/getting-started
+
 import { combineReducers } from "redux";
 import { productListReducer } from "./reducers/productReducers";
 import { cartReducer } from "./reducers/cartReducer";
@@ -12,6 +14,7 @@ const persistConfig = {
   whitelist: ["cart", "home"],
 };
 
+// Citation: Adapted From: https://blog.reactnativecoach.com/the-definitive-guide-to-redux-persist-84738167975
 const rootReducer = combineReducers({
   productList: productListReducer,
   cart: cartReducer,

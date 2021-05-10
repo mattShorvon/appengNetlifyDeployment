@@ -1,3 +1,6 @@
+/* REFERENCE: THE Css displayed for this form was obtained from: 
+https://github.com/briancodex/react-navbar-dropdown/tree/master/src */
+
 .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 110px;

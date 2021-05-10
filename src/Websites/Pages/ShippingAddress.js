@@ -67,6 +67,7 @@ export default function ShippingAddressScreen({
   };
 
   return (
+    // Redux Functions and CSS From https://github.com/basir/amazona */
     <div>
       <CheckoutPanel step1></CheckoutPanel>
       <form className="form" onSubmit={submitHandler}>

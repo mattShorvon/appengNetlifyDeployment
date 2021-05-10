@@ -46,6 +46,8 @@ const Products = ({ websitename, showWebsiteList }) => {
   console.log(productList);
 
   return (
+    // Function to calcuate quantity (line 95) adapted from https://github.com/basir/amazona */
+    // Styled Components designed: https://www.codavilla.com/posts/build-a-react-restaurant-website-using-styled-components
     <>
       {console.log(loading)}
       {loading ? (

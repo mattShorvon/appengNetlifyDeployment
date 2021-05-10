@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "../../css/products.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+// Citation: Bootstrap used for this function from: https://mdbootstrap.com/docs/react/ (Pre set Shopping Cart)
 import {
   MDBRow,
   MDBCard,
@@ -18,6 +19,7 @@ import { useHistory } from "react-router-dom";
 import { removeFromCart } from "../actions/cartActions";
 
 function Cart({ websitename, showWebsiteList }) {
+  /* REFERENCE: Adapted & Built on From: https://github.com/basir/amazona */
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const dispatch = useDispatch();
@@ -49,6 +51,7 @@ function Cart({ websitename, showWebsiteList }) {
 
   const rows = [];
   cartItems.map((row) => {
+    // From MDB-React Bootstrap Template
     return rows.push({
       product: [
         <h5 className="mt-3" key={new Date().getDate + 1}>

@@ -1,4 +1,4 @@
-
+// Citation: Adapted from: https://redux.js.org/introduction/getting-started
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { persistStore } from 'redux-persist';

@@ -8,8 +8,8 @@ import { Layout } from "./Layout.js";
 import { Jumbotron as Jumbo, Container } from "react-bootstrap";
 import styled from "styled-components";
 import Image from "../Photos/testimage.jpg";
-// const express = require("express");
 
+// Citation: Functional Component Style From: https://github.com/briancodex/react-website-v1/tree/starter
 const Styles = styled.div`
   .jumbo {
     background: url(${Image}) no-repeat fixed bottom;
@@ -49,6 +49,7 @@ function AboutMe({ websitename }) {
         .then((response) => setAboutMe(response.data[0]));
     } else {
       axios
+      // Citation: Code adapted from: https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
         .post("https://comp0067.herokuapp.com/aboutmedata", { userId })
         .then((response) => setAboutMe(response.data[0]));
     }
@@ -56,6 +57,7 @@ function AboutMe({ websitename }) {
   // return <div>{console.log(orders[0])}</div>;
 
   const handleSubmit = async (e) => {
+    // CITATION: adapted from https://w3collective.com/react-contact-form/
     e.preventDefault();
     setStatus("Sending...");
     const { name, email, message } = e.target.elements;

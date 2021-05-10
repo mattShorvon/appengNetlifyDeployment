@@ -16,6 +16,7 @@ export default function PayScreen({ websitename, showWebsiteList }) {
   };
 
   return (
+     /* REFERENCE: Checkout Panel & Redux Action adapted from https://github.com/basir/amazona */
     <div>
       <CheckoutPanel step1 step2></CheckoutPanel>
       <form className="form" onSubmit={submitHandler}>

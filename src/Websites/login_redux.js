@@ -1,3 +1,6 @@
+// CITATION: Code taken & Adapted from: 
+// https://www.udemy.com/course/the-complete-react-redux-node-express-mysql-developer-course/learn/lecture/23505828#overview
+
 import React, { Component } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";

@@ -13,6 +13,8 @@ function Orders() {
   var userId = decoded_token.userId;
 
   useEffect(() => {
+    // Citation: Code adapted from: https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
+    // Citation: Code adapted from: https://medium.datadriveninvestor.com/fetch-data-from-the-database-api-in-react-with-useeffect-and-usestate-af11468cdb14
     fetch("https://comp0067.herokuapp.com/unfulfilledorders", {
       method: "POST",
       headers: {
@@ -25,6 +27,8 @@ function Orders() {
   }, [rerender]);
 
   useEffect(() => {
+    // Citation: Code adapted from: https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
+    // Citation: Code adapted from: https://medium.datadriveninvestor.com/fetch-data-from-the-database-api-in-react-with-useeffect-and-usestate-af11468cdb14
     fetch("https://comp0067.herokuapp.com/fulfilledorders", {
       method: "POST",
       headers: {

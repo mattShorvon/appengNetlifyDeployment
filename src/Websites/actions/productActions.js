@@ -1,3 +1,5 @@
+/* REFERENCE: Adapted & Built on From: https://github.com/basir/amazona */
+
 import {
   ADD_NEW_PRODUCT,
   PRODUCT_LIST_FAIL,
@@ -14,6 +16,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
 export const listProductsAndServices = () => async (dispatch) => {
+  // Function Adapted from https://github.com/basir/amazona 
   dispatch({ type: PRODUCT_LIST_REQUEST });
   var token = localStorage.getItem("token");
   var decoded_token = jwt_decode(token);
@@ -88,6 +91,7 @@ export const addNewProduct = (data) => async (dispatch) => {
   var userId = decoded_token.userId;
   console.log(data);
   try {
+      // Citation: Code for this function adapted from 'Digesting React - Nathan Sebastian'
     await axios
       .post("https://comp0067.herokuapp.com/addnewproduct", {
         userId: userId,

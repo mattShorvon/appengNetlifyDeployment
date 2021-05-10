@@ -4,6 +4,7 @@ import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components'; 
 import Image2 from '../Photos/pexels-matt-hardy-3560139.jpg';
 
+//Citation: Functional Component Style from https://github.com/briancodex/react-website-v1/tree/starter
 const Styles = styled.div`
   .jumbo {
     background: url(${Image2}) no-repeat fixed bottom;
@@ -27,7 +28,7 @@ const Styles = styled.div`
 //need to query which website it is
 
 function Core({ websitename }) {
-    
+// Citation: jumbotron and components from 'react-strap' bootstrap template
     return (
         <>
         <Styles>

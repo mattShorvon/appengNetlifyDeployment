@@ -14,6 +14,7 @@ export default function OrderNotice({ websitename, showWebsiteList }) {
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
+  /* REFERENCE: Functions to calculate price partially adapted from: https://github.com/basir/amazona */
   cart.shippingPrice = toPrice(5);
   cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
@@ -33,6 +34,7 @@ export default function OrderNotice({ websitename, showWebsiteList }) {
     history.push(path);
     dispatch(emptyCart(cart));
   };
+  /* REFERENCE: Checkout Panel & Redux Action adapted from https://github.com/basir/amazona */
   return (
     <>
       <div>

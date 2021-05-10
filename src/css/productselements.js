@@ -1,3 +1,6 @@
+/* The React Styled Components for this section were obtained from: 
+https://www.codavilla.com/posts/build-a-react-restaurant-website-using-styled-components */
+
 import styled from 'styled-components';
 
 export const ProductsContainer = styled.div`

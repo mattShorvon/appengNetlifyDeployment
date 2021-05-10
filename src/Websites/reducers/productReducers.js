@@ -8,6 +8,7 @@ import {
 } from "../constants/productsConstants";
 
 export const productListReducer = (state = { products: [] }, action) => {
+  // REFERENCE: Built on From: https://github.com/basir/amazona
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
       return { loading: true };

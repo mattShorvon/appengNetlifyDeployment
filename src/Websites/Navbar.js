@@ -83,6 +83,8 @@ function MainNavbar({ showWebsiteList, websitename }) {
   window.addEventListener("resize", showButton);
 
   return (
+    // Citation: Navbar CSS adapted from: /* REFERENCE: THE Css displayed for this form was obtained from: 
+    // https://github.com/briancodex/react-navbar-dropdown/tree/master/src */
     <>
       <nav className="navbar">
         <div className="navbar-container">

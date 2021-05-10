@@ -5,6 +5,7 @@ import '../../css/products.css'
 import 'mdbreact/dist/css/mdb.css'
 
 export default function CheckoutPanel(props) {
+  /* REFERENCE: Checkout Panel From: https://github.com/basir/amazona */
   return (
     <div className="row checkout-steps">
       <div className={props.step1 ? 'active': ''} >ShippingInfo</div>

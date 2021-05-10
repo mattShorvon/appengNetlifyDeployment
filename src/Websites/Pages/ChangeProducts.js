@@ -10,6 +10,7 @@ function getRandomInt(max) {
 }
 
 function ChangeProducts() {
+  // Citation: Code for this function adapted from 'Digesting React - Nathan Sebastian'
   const [name, setName] = useState("");
   const [itemPicture, setPhoto] = useState("");
   const [description, setDesc] = useState("");

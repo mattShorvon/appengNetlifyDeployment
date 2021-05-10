@@ -1,3 +1,5 @@
+/* REFERENCE: Adapted & Built on From: https://github.com/basir/amazona */
+
 import {
   CART_ADD_ITEM,
   CART_REMOVE_ITEM,
@@ -11,6 +13,7 @@ const initialState = {
 };
 
 export const cartReducer = (state = initialState, action) => {
+  //REFERENCE: Build From: https://github.com/basir/amazona
   switch (action.type) {
     case CART_ADD_ITEM:
       const item = action.payload;

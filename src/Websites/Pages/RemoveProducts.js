@@ -33,6 +33,7 @@ function RemoveProducts() {
   useEffect(() => dispatch(listProductsAndServices(businessName)), []);
 
   return (
+    // Styled Components designed: https://www.codavilla.com/posts/build-a-react-restaurant-website-using-styled-components
     <>
       {loading ? (
         <div>

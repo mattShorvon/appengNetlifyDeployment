@@ -13,14 +13,13 @@ export default function ConfirmOrder({ websitename, showWebsiteList }) {
   const toPrice = (num) => Number(num.toFixed(2));
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
+    // Reference: https://github.com/basir/amazona
   );
   cart.shippingPrice = toPrice(5);
   cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
 
   const submitOrder = (e) => {
-    // TODO: insert into here something that sends the data of the order to the orders table in the database
-    // The 'total price' is the one that needs to be stored also I imagine
 
     e.preventDefault();
     let path = `/-/${websitename}/${showWebsiteList}/ordernotice`;
@@ -32,6 +31,7 @@ export default function ConfirmOrder({ websitename, showWebsiteList }) {
     // dispatch(emptyCart(cart));
   };
   return (
+    /* REFERENCE: Checkout Panel From: https://github.com/basir/amazona */
     <div>
       <CheckoutPanel step1 step2 step3></CheckoutPanel>
       <div className="row-new top">

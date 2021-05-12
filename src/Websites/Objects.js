@@ -9,7 +9,7 @@ import {
   Switch,
 } from "react-router-dom";
 import MasterForm from "../index";
-import Websitelist from "./websitelist.js";
+// import Websitelist from "./websitelist.js"; Issue 1
 import Home from "./Home";
 import LoginRedux from "./login_redux";
 import { createStore } from "redux";

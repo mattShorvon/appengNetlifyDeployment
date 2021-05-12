@@ -8,7 +8,7 @@ import {
   REMOVE_NEW_PRODUCT,
   REMOVE_NEW_PRODUCT_FAIL,
 } from "../constants/productsConstants";
-import data from "../Pages/data";
+// import data from "../Pages/data"; Issue 2
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { useLocation } from "react-router-dom";

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutMe from "./Pages/AboutMe";
 import Products from "./Pages/Products";
 import Core from "./Pages/Core";
-import SignUp from "./Pages/SignUp";
+// import SignUp from "./Pages/SignUp"; Issue 3
 import Basket from "./Pages/Basket";
 import websitelist from "./websitelist.js";
 import { useHistory } from "react-router-dom";

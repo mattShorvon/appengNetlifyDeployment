@@ -1,3 +1,6 @@
+// CITATION: Code taken & Adapted from:
+// https://www.udemy.com/course/the-complete-react-redux-node-express-mysql-developer-course/learn/lecture/23505828#overview
+
 import { RE_USER_STATE } from "../actions/userActions";
 
 // Matt's reducers are here. Reducers describe how actions transform the state into the next state.

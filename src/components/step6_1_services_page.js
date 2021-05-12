@@ -262,6 +262,21 @@ function Step6_1(props) {
             />
 
             <br />
+            <label htmlFor="defaultFormCardNameEx" className="grey-text">
+              Item Quantity:
+            </label>
+            <input
+                type="text"
+                id="itemQuantity"
+                name="itemQuantity"
+                className="form-control"
+                value={itemQuantity}
+                data-testid="goodQuantity"
+                onChange={(event) => {
+                  setItemQuantity(event.target.value);
+                }}
+            />
+            <br />
 
             <p className="grey-text text-center font-weight-bold">
               {" "}

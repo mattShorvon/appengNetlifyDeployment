@@ -59,7 +59,7 @@ function Step6_1(props) {
       itemCategory: "Service",
     };
 
-    let checkItem = ["itemName", "itemDescription", "itemPrice", "itemPicture"];
+    let checkItem = ["itemName", "itemDescription", "itemPrice", "itemQuantity", "itemPicture"];
 
     for (let i = 0; i < checkItem.length; i++) {
       if (!items_c[currentGood][checkItem[i]]) {

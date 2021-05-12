@@ -9,7 +9,7 @@ import Products from "./Pages/Products";
 import Core from "./Pages/Core";
 // import SignUp from "./Pages/SignUp"; Issue 3
 import Basket from "./Pages/Basket";
-import websitelist from "./websitelist.js";
+// import websitelist from "./websitelist.js";
 import { useHistory } from "react-router-dom";
 import Orders from "./Pages/Orders";
 import ChangeProducts from "./Pages/ChangeProducts";
@@ -72,10 +72,10 @@ function Home({ showWebsiteList, websitename }) {
               />{" "}
             </>
           </Route>
-          <Route path={`/-/${websitename}/${showWebsiteList}/sign-up`}>
+          {/* <Route path={`/-/${websitename}/${showWebsiteList}/sign-up`}>
             {" "}
             <SignUp />
-          </Route>
+          </Route> */}
           <Route path={`/-/${websitename}/${showWebsiteList}/basket`}>
             {" "}
             <Basket
